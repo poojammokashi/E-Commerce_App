@@ -412,37 +412,10 @@ Annimations
   gap: 1.5em; /* Gap between grid items */
 }
 
-/* Styling for each product item */
-.product {
-  background-color: #fff; /* Background color */
-  padding: 0.75em; /* Padding around each product item */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Box shadow for depth */
-  text-align: center; /* Center-aligning text and image */
-  font-size: 0.9em; /* Font size for text */
-  transition: transform 0.3s ease-in-out; /* Smooth scale transition on hover */
-  overflow: hidden; /* Prevent overflow issues */
-}
 
-/* Styling for the product image */
-.product img {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
-  animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
-}
 
-/* Styling for the product title */
-.product h3 {
-  font-size: 1em; /* Font size for the title */
-  margin: 0.5em 0; /* Margin for spacing */
-}
 
-/* Styling for the product price */
-.product p {
-  font-size: 0.9em; /* Font size for the price */
-  color: #ff6347; /* Text color for the price */
-}
+
 
 /* Hover effect on product items */
 .product:hover {
