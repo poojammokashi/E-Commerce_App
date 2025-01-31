@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ed8a8a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +76,7 @@
     margin: 0.5em;
     border-radius: 4px 4px 0 0;
     transition: background-color 0.3s ease;
-    color: #001aff; /* Color for switch links */
+    color: #019b98; /* Color for switch links */
   }
   
   .form-label:hover {
