@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping Page</title>
+	</head>
+	<body>
+		<div>
+			<h1 style="text-align: center">Shooping Cart</h1>
+		</div>
+		<script>
+			function initializeCart() {
+				// Check if the cart already exists in localStorage
+				const existingCart = localStorage.getItem('cart');
+				if (!existingCart) {
+					// empty array
+					const cart = [];
+					localStorage.setItem('cart', JSON.stringify(cart));
+					console.log('Cart initialized:', cart);
+				} else {
+					console.log('Cart already exists:', JSON.parse(existingCart));
+				}
+			}
+		</script>
+	</body>
+</html>

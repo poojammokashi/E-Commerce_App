@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>E_Commerce</title>
+		<title>E-commerce Landing Page</title>
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
@@ -11,16 +11,18 @@
 		<header>
 			<nav class="navbar">
 				<div class="logo-container">
+					<!-- <img class="logo" src="https://via.placeholder.com/150x50?text=ShopLogo" alt="Shop Logo"> -->
 					<img
-						src="https://placehold.co/150x50?text=ShopLogo"
-						alt="shop_logo"
+						class="logo"
+						src="./assets/pinterest-3d-3106488_1280.jpg"
+						alt="Shop Logo"
 					/>
 				</div>
 				<ul class="nav-links">
-					<li><a href="">Home</a></li>
-					<li><a href="">Shop</a></li>
-					<li><a href="">Contact</a></li>
-					<li><a href="">About</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
 					<li><a href="signup-signin.html">Login</a></li>
 				</ul>
 			</nav>
@@ -29,46 +31,35 @@
 		<!-- Main Content Sections -->
 		<section class="hero">
 			<div class="container">
-				<h2>Welcome To Our Online Store</h2>
-				<p>Discover the bes product at unbeatable price</p>
+				<h2>Welcome to Our Online Store</h2>
+				<p>Discover the best products at unbeatable prices</p>
 				<button class="cta-button">Shop Now</button>
+				<p class="offer-text">Special Offer! Get 20% off on all electronics</p>
 			</div>
 		</section>
 
 		<section class="categories">
 			<div class="container">
-				<h2>Shop By Category</h2>
+				<h2>Shop by Category</h2>
 				<div class="grid">
 					<div class="category">
 						<!-- <img src="https://via.placeholder.com/200?text=Electronics" alt="Electronics"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Electronics"
-							alt="Electronics"
-						/>
+						<img src="./assets/apple-1867991_1280.jpg" alt="Electronics" />
 						<h3>Electronics</h3>
 					</div>
 					<div class="category">
 						<!-- <img src="https://via.placeholder.com/200?text=Fashion" alt="Fashion"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Fashion"
-							alt="Fashion"
-						/>
+						<img src="./assets/store-window-213496_1280.jpg" alt="Fashion" />
 						<h3>Fashion</h3>
 					</div>
 					<div class="category">
 						<!-- <img src="https://via.placeholder.com/200?text=Home+Decor" alt="Home Decor"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Home Decor"
-							alt="Home Decor"
-						/>
+						<img src="./assets/kitchen-7419336_1280.jpg" alt="Home Decor" />
 						<h3>Home Decor</h3>
 					</div>
 					<div class="category">
 						<!-- <img src="https://via.placeholder.com/200?text=Books" alt="Books"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Books"
-							alt="Books"
-						/>
+						<img src="./assets/books-1617327_1280.jpg" alt="Books" />
 						<h3>Books</h3>
 					</div>
 				</div>
@@ -81,41 +72,78 @@
 				<div class="grid">
 					<div class="product">
 						<!-- <img src="https://via.placeholder.com/200?text=Product+1" alt="Product 1"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+1"
-							alt="Product 1"
-						/>
+						<img src="./assets/healthy-8360076_1280.jpg" alt="Product 1" />
 						<h3>Product 1</h3>
 						<p>$49.99</p>
 					</div>
 					<div class="product">
 						<!-- <img src="https://via.placeholder.com/200?text=Product+2" alt="Product 2"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+2"
-							alt="Product 2"
-						/>
+						<img src="./assets/perfume-3640056_1280.jpg" alt="Product 2" />
 						<h3>Product 2</h3>
 						<p>$59.99</p>
 					</div>
 					<div class="product">
 						<!-- <img src="https://via.placeholder.com/200?text=Product+3" alt="Product 3"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+3"
-							alt="Product 3"
-						/>
+						<img src="./assets/watch-4449152_1280.jpg" alt="Product 3" />
 						<h3>Product 3</h3>
 						<p>$69.99</p>
 					</div>
 					<div class="product">
 						<!-- <img src="https://via.placeholder.com/200?text=Product+4" alt="Product 4"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+4"
-							alt="Product 4"
-						/>
+						<img src="./assets/technology-5519649_1280.jpg" alt="Product 4" />
 						<h3>Product 4</h3>
 						<p>$79.99</p>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="product-features">
+			<div class="container">
+				<h2>Product Features Comparison</h2>
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th rowspan="2">Product</th>
+							<th rowspan="2">Price</th>
+							<th rowspan="2">Features</th>
+							<th colspan="2">Details</th>
+						</tr>
+						<tr>
+							<th>Size</th>
+							<th>Weight</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Product 1</td>
+							<td>$49.99</td>
+							<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+							<td>Large</td>
+							<td>1.5 kg</td>
+						</tr>
+						<tr>
+							<td>Product 2</td>
+							<td>$59.99</td>
+							<td>
+								Sed do eiusmod tempor incididunt ut labore et dolore magna
+								aliqua.
+							</td>
+							<td>Medium</td>
+							<td>1.2 kg</td>
+						</tr>
+						<tr>
+							<td>Product 3</td>
+							<td>$69.99</td>
+							<td>
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat.
+							</td>
+							<td>Small</td>
+							<td>0.8 kg</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</section>
 
@@ -143,77 +171,9 @@
 			</div>
 		</section>
 
-		<section class="featured-products">
-			<div class="container">
-				<h2>Featured Products</h2>
-				<div class="grid">
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+1" alt="Product 1"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+1"
-							alt="Product 1"
-						/>
-						<h3>Product 1</h3>
-						<p>$49.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+2" alt="Product 2"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+2"
-							alt="Product 2"
-						/>
-						<h3>Product 2</h3>
-						<p>$59.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+3" alt="Product 3"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+3"
-							alt="Product 3"
-						/>
-						<h3>Product 3</h3>
-						<p>$69.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+4" alt="Product 4"> -->
-						<img
-							src="https://placehold.co/200/f1c1b9/white?text=Product+4"
-							alt="Product 4"
-						/>
-						<h3>Product 4</h3>
-						<p>$79.99</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="testimonials">
-			<div class="container">
-				<h2>Customer Testimonials</h2>
-				<div class="grid">
-					<div class="testimonial">
-						<p>"Amazing products! Fast shipping and great customer service."</p>
-						<h3>- John Doe</h3>
-					</div>
-					<div class="testimonial">
-						<p>"I love shopping here. The prices are unbeatable."</p>
-						<h3>- Jane Smith</h3>
-					</div>
-					<div class="testimonial">
-						<p>"Fantastic quality. Will definitely buy again."</p>
-						<h3>- Bob Johnson</h3>
-					</div>
-					<div class="testimonial">
-						<p>"Great variety and easy to use website. Highly recommend!"</p>
-						<h3>- Alice Brown</h3>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer Sections -->
+		<!-- Footer Section -->
 		<footer class="footer">
-			<p>Your E-commerce Store. All rights reserved.</p>
+			<p>&copy; 2024 Your E-commerce Store. All rights reserved.</p>
 		</footer>
 	</body>
 </html>
