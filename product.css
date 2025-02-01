@@ -44,4 +44,9 @@ body {
                 text-align: center;
                 margin-top: 40px;
                 }
+
+                .quantity-input {
+                    width: 60px;
+                    margin-right: 10px;
+                }
                             

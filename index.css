@@ -1,4 +1,4 @@
-/* General Styles */
+General Styles
 body, html {
   margin: 0;
   padding: 0;
@@ -131,45 +131,73 @@ h1, h2, h3, p {
 }
 
 /* Featured Products Section Styles */
-.featured-products {
-  padding: 4em 0;
-  text-align: center;
-}
-
-.featured-products h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.grid {
+.featured-products .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted grid layout for responsiveness */
-  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
 }
 
 .product {
-  background-color: #fff;
-  padding: 0.75em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
   text-align: center;
-  font-size: 0.9em;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 380px; /* Adjust height to ensure all cards have the same height */
 }
 
 .product img {
   width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
+  height: 200px; /* Fixed height for images */
+  object-fit: fill; /* Ensure images cover the container */
+  margin-bottom: 10px; /* Space below the image */
 }
 
 .product h3 {
-  font-size: 1em;
-  margin: 0.5em 0;
+  margin: 0;
+  font-size: 0.8em;
+  height: 60px; /* Fixed height for product title */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 .product p {
-  font-size: 0.9em;
+  margin: 10px 0; /* Space around the price */
+  font-size: 1.1em;
   color: #014e60;
+  height: 30px; /* Fixed height for price */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/* Ensures description is in a consistent position */
+.product .description {
+  flex-grow: 1; /* Allow description to take up remaining space */
+  margin: 0 0 10px 0; /* Space below the description */
+  height: 60px; /* Fixed height for description */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+@media (max-width: 300px) {
+  .featured-products .product {
+      height: auto; /* Allow flexibility on smaller screens */
+  }
+
+  .featured-products .product img {
+      height: auto; /* Adjust image height on smaller screens */
+  }
+
+  .featured-products .product h3,
+  .featured-products .product p {
+      height: auto; /* Adjust text height on smaller screens */
+  }
 }
 
 /* Testimonials Section Styles */
@@ -391,7 +419,7 @@ Annimations
   transform: scale(1.05); /* Scale up effect on hover */
 }
 
-/* Featured Products Section Styles */
+
 
 /* Styling the container for featured products */
 .featured-products {

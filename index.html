@@ -20,10 +20,10 @@
 				</div>
 				<ul class="nav-links">
 					<li><a href="#">Home</a></li>
-					<li><a href="cart.html">Shop</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="product_page.html" target="_blank">Shop</a></li>
+					<li><a href="cart.html" target="_blank">Cart</a></li>
 					<li><a href="#">Contact</a></li>
-					<li><a href="signup-signin.html">Login</a></li>
+					<li><a href="signup-signin.html" target="_blank">Login</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -69,31 +69,8 @@
 		<section class="featured-products">
 			<div class="container">
 				<h2>Featured Products</h2>
-				<div class="grid">
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+1" alt="Product 1"> -->
-						<img src="./assets/healthy-8360076_1280.jpg" alt="Product 1" />
-						<h3>Product 1</h3>
-						<p>$49.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+2" alt="Product 2"> -->
-						<img src="./assets/perfume-3640056_1280.jpg" alt="Product 2" />
-						<h3>Product 2</h3>
-						<p>$59.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+3" alt="Product 3"> -->
-						<img src="./assets/watch-4449152_1280.jpg" alt="Product 3" />
-						<h3>Product 3</h3>
-						<p>$69.99</p>
-					</div>
-					<div class="product">
-						<!-- <img src="https://via.placeholder.com/200?text=Product+4" alt="Product 4"> -->
-						<img src="./assets/technology-5519649_1280.jpg" alt="Product 4" />
-						<h3>Product 4</h3>
-						<p>$79.99</p>
-					</div>
+				<div class="grid" id="featured-products">
+					<!--Products will be dynamically displayed  -->
 				</div>
 			</div>
 		</section>
@@ -175,5 +152,51 @@
 		<footer class="footer">
 			<p>&copy; 2024 Your E-commerce Store. All rights reserved.</p>
 		</footer>
+		<script>
+			// Promises example using fetch API
+			function fetchDataPromise(url) {
+				return fetch(url) // Use the passed-in 'url' parameter
+					.then((res) => {
+						if (!res.ok) {
+							throw new Error('Network response was not ok ' + res.statusText);
+						}
+						return res.json(); // Notice the parentheses to call the method
+					})
+					.catch((err) => {
+						console.error('There was a problem with the fetch operation:', err);
+					});
+			}
+
+			document.addEventListener('DOMContentLoaded', async () => {
+				const featuredProductsContainer =
+					document.getElementById('featured-products');
+				const apiUrl = 'https://fakestoreapi.com/products'; // Example API URL
+
+				try {
+					// const data = await fetchDataWithCallbackBasedPromise(apiUrl); // Await the callback-based function
+					const data = await fetchDataPromise(apiUrl); // Await the promise-based function
+					// const data = await fetchDataAsync(apiUrl); // Await the async function
+
+					if (data.length > 0) {
+						featuredProductsContainer.innerHTML = ''; // Clear any existing items
+						data.slice(0, 10).forEach((product) => {
+							const productElement = document.createElement('div');
+							productElement.className = 'product';
+							productElement.innerHTML = `
+                            <img src="${product.image}" alt="${product.title}">
+                            <h3>${product.title}</h3>
+                            <p>$${product.price.toFixed(2)}</p>
+                        `;
+							featuredProductsContainer.appendChild(productElement);
+						});
+					} else {
+						featuredProductsContainer.innerHTML =
+							'<p>No products available</p>';
+					}
+				} catch (error) {
+					console.error('Error displaying products:', error);
+				}
+			});
+		</script>
 	</body>
 </html>

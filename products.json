@@ -1,4 +1,4 @@
-const products = [
+ [
     {
         "name": "Premium Leather Bag",
         "description": "Handcrafted leather bag with multiple compartments and adjustable strap. Ideal for daily use or travel.",
